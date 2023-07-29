@@ -1,0 +1,15 @@
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+}
+.nfHome{
+    color: blue;
+    
+}
+.textNf{
+    font-size: large;
+    font-weight: 700;
+}
