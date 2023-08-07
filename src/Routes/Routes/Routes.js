@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
-import Home from "../../Pages/Home/Home"
-import Publications from "../../Pages/Publications/Publications"
+import StudentProfile from "../../Pages/StudentProfile/StudentProfile"
+import Hostel from "../../Pages/Hostel/Hostel"
+import Transport from "../../Pages/Transport/Transport"
 import NotFound from "../../Pages/NotFound/NotFound";
 import Login from "../../Pages/Login/Login"
 import Register from "../../Pages/Register/Register"
+import PrivateRoute from "../PrivateRoute/PrivateRoute"
 
 export const routes = createBrowserRouter([
     {
@@ -12,8 +14,8 @@ export const routes = createBrowserRouter([
     element:<Main></Main>,
     children:[
             {
-                path: '/',
-                element: <Home></Home>,
+                path: '/studentProfile',
+                element: <StudentProfile></StudentProfile>,
             },
             {
                 path: '/login',
@@ -23,8 +25,12 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>,
             },
             {
-                path: '/publications',
-                element: <Publications></Publications>,
+                path: '/hostel',
+                element: <PrivateRoute><Hostel></Hostel></PrivateRoute>,
+            },
+            {
+                path: '/transport',
+                element: <PrivateRoute><Transport></Transport></PrivateRoute>,
             },
 
     ]
