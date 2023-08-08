@@ -26,7 +26,7 @@ const SingleStudentProfile = ({x,handleDelete}) => {
             </div>
 
             <div className='btn-delete'>
-                <button onClick={() => handleDelete(_id)} className='btn btn-secondary btn-outline mt-5 mb-5 d-button'>Delete & Update A New Profile</button>
+                <button onClick={() => handleDelete(_id)} className='btn btn-error  mt-5 mb-5 d-button'>Delete & Update A New Profile</button>
             </div>
             
         </div>

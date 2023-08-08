@@ -52,7 +52,7 @@ const StudentProfile = () => {
         .then(imgData => {
             if(imgData.success){
                 console.log(imgData.data.url);
-                const doctor = {
+                const student = {
                     sName: data.name, 
                     email: data.email,
                     PNumber: data.pNumber,
@@ -71,13 +71,13 @@ const StudentProfile = () => {
                     headers: {
                         'content-type': 'application/json', 
                     },
-                    body: JSON.stringify(doctor)
+                    body: JSON.stringify(student)
                 })
                 .then(res => res.json())
                 .then(result =>{
                     console.log(result);
                     alert(`Student Profile Created Successfully`);
-                     navigate('/studentProfile')
+                     navigate('/')
                 })
             }
         })
