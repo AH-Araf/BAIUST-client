@@ -22,7 +22,6 @@ const AddService = () => {
     }, [user?.email])
     // console.log(user.email);
 
-
     //
     const handleAddJob = data => {
         const image = data.image[0];
@@ -43,10 +42,11 @@ const AddService = () => {
                     description: data.description,
                     Details: data.Details,
                     Fee: data.Fee,
+                    Semester: data.Semester,
                     Deadline: data.Deadline,
                     types: data.types,
                     image: imgData.data.url,
-                    email: user.email,
+                    adminEmail: user.email,
                 }
 
               
@@ -105,15 +105,24 @@ const AddService = () => {
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Service Fee</span></label>
-                    <input  type="text" {...register("Fee", {
+                    <input  type="number" {...register("Fee", {
                         required: true
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.Fee && <p className='text-red-500'>{errors.Fee.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Semester</span></label>
+                    <input placeholder="Ex: Spring- 2024" type="text" {...register("Semester", {
+                        required: true
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.Semester && <p className='text-red-500'>{errors.Semester.message}</p>}
+                </div>
+
+
+                <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Deadline</span></label>
-                    <input placeholder="Ex- 10 January 2024" type="text" {...register("Deadline", {
+                    <input placeholder="Ex: 10 January 2024" type="text" {...register("Deadline", {
                         required: true
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.Deadline && <p className='text-red-500'>{errors.Deadline.message}</p>}

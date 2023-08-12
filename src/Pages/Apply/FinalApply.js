@@ -3,11 +3,11 @@ import { useForm } from 'react-hook-form';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const FinalApply = ({x}) => {
-    const {uName, ApplicantEmail, uPNumber, ulinkedin, uaSkills, uAddress,  uCategoryEdu, uImage,  uaResume, applicantUserEmail} =x;
+    const {sName, email, PNumber, ID, Level, Term, Gender,BloodGroup, uImage, stuUserEmail} =x;
     
 
     const a = useLoaderData();
-    const {job, description, jobDescription, skill, category, types, _id, image, email } = a;
+    const {Title, description, adminEmail, types, _id, image } = a;
 
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -16,20 +16,21 @@ const FinalApply = ({x}) => {
 
     const handleApply = data => {
                 const doctor = {
-                            name: uName, 
-                            applicantEmail: ApplicantEmail,
-                            pNumber: uPNumber,
-                            linkedin: ulinkedin,
-                            aResume : uaResume,
-                            address: uAddress,
-                            categoryEdu: uCategoryEdu,
-                            image: image,
+                            name: sName, 
+                            applicantEmail: email,
+                            pNumber: PNumber,
+                            ID: ID,
+                            Level : Level,
+                            Term: Term,
+                            Gender:  Gender,
+                            BloodGroup: BloodGroup,
+                            serviceImage: image,
                             imageApplicant: uImage,
-                            companyEmail: email,
-                            appliedOn: job,
-                            jTypes: types,
-                            jId: _id,
-                            applicantUserEmail: applicantUserEmail
+                            adminEmail: adminEmail,
+                            appliedOn: Title,
+                            sTypes: types,
+                            sId: _id,
+                            stuUserEmail: stuUserEmail
                 }
 
                 // save doctor information to the database
@@ -52,33 +53,35 @@ const FinalApply = ({x}) => {
     return (
         <div>
             <div className='formApply'>
-            <h2 className="text-3xl home-title">Apply Now</h2>
+            <h2 className="apply-header-txt">Apply Now</h2>
             <div className='add-jobs-container'>
            
             
             <form onSubmit={handleSubmit(handleApply)}>
            
-                    <div className=' job-single-categoryZ email-job grid grid-cols-3'>
+                    <div className=''>
 
                     <div className=''>   
-            <img className='applicant-image'  src={uImage} alt="" />  <br />    
+                    <img className='student-u-img'  src={uImage} alt="" />  <br /> 
+             
+                    <div>
+                        
+                <u><h2 className='mb-2 title2'>Student Information</h2></u>
+                <p><span className='title2'>Name:</span> <span>{sName}</span></p>
+                <p><span className='title2'>ID:</span> <span>{ID}</span></p>  
+                <span> <span className='title2'>Level: </span>{Level}</span> - <span> <span className='title2'>Term: </span>{Term}</span>
+                <p><span className='title2'>Email:</span> <span>{email}</span></p>  
+                <p><span className='title2'>Phone Number:</span> <span>{PNumber}</span></p>  
+                <p><span className='title2'>Gender:</span> <span>{Gender}</span></p> 
+                <p><span className='title2'>BloodGroup:</span> <span>{BloodGroup}</span></p> 
+            </div>
             
             <div>
             
             
             </div>   
         </div> 
-                    <div className=''>
-                
-                <h2 className=' ap-title'>Applicant Information</h2>
-                <p><span className='title5'>Name:</span> <span className='title4'>{uName}</span></p>  
-                <p><span className='title5'>Email:</span> <span className='title4'>{ApplicantEmail}</span></p>  
-            <p><span className='title5'>Phone:</span> <span className='title4'>{uPNumber}</span></p>  
-                <p><span className='title5'>Linkedin Profile:</span> <span className='title4'>{ulinkedin}</span></p>  
-                <p><span className='title5'>Resume Link:</span> <span className='title4'>{uaResume}</span></p>  
-               <p><span className='title5'>Address:</span> <span className='title4'> {uAddress} </span></p>
-                <p><span className='title5'>Education:</span> <span className='title4'>{uCategoryEdu}</span></p>
-            </div>
+        
             </div>
      
                

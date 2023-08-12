@@ -29,7 +29,7 @@ const Services = () => {
                     jobs.filter((val)=>{
                         if(searchTerm == ""){
                             return val
-                        } else if (val.job.toLowerCase().includes(searchTerm.toLowerCase())){
+                        } else if (val.Title.toLowerCase().includes(searchTerm.toLowerCase())){
                             return val
                         }
                     }).map(a => <SService

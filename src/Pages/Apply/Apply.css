@@ -1,0 +1,93 @@
+.apply-con{
+    display: flex;
+    justify-content: center;
+}
+.no-applied{
+    font-size: xx-large;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container1{
+    width: 2000px;
+    margin: 20px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.service-container1 img{
+    width: 500px;
+    height: 250px;
+}
+
+.service-container2{
+    width: 2000px;
+    margin: 20px 0px;
+    margin-right: 10px;
+    background-color:rgb(196, 224, 196);
+    padding: 10px;
+}
+.student-u-img{
+    width: 200px;
+    height: 240px;
+}
+.apply-header-txt{
+    font-size:x-large;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.applied-single img{
+    height: 150px;
+    width: 300px;
+    border: 3px solid rgb(148, 197, 148);
+    padding: 3px;
+}
+.applied-container{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgb(143, 168, 143) 0px 6px 12px 0px;
+    padding: 10px;
+    margin: 40px 20px;
+    transition-duration: 1.5s;
+}
+.applied-container:hover{
+    padding: 10px 40px;
+    margin: 40px 20px;
+}
+.applied-single1 img{
+    height: 120px;
+    width: 90px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 50px;
+    margin-bottom: 280px;
+}
+.card-details{
+    width: 440px;
+    padding: 10px;
+    background-image: linear-gradient(to right, rgb(184, 230, 184) , white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card-title2{
+    text-align: center;
+    color: darkgreen;
+    font-weight: 500;
+}
+.card-student-details{
+    display: flex;
+    justify-content: space-between;
+}
+.card-student-details img{
+    width: 60px;
+    height: 80px;
+}

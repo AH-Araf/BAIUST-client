@@ -13,6 +13,10 @@ import SingleService from "../../Pages/Services/SingleService"
 import AddService from "../../Pages/Admin/AddService"
 import PrivateRoute from "../PrivateRoute/PrivateRoute"
 import Admin from "../../Pages/Admin/Admin";
+import FinalApply from "../../Pages/Apply/FinalApply";
+import Applied from "../../Pages/Apply/Applied";
+import AppliedCard from "../../Pages/Apply/AppliedCard";
+import SingleApplicant from "../../Pages/Admin/SingleApplicant"
 
 export const routes = createBrowserRouter([
     {
@@ -61,9 +65,28 @@ export const routes = createBrowserRouter([
                 element: <PrivateRoute><Admin></Admin></PrivateRoute>,
             },
             {
+                path: '/applied',
+                element: <Applied></Applied>,
+            },
+            {
                 path: '/apply/:id',
                 element: <PrivateRoute><Apply></Apply></PrivateRoute>,
                 loader: async ({params}) =>  fetch(`http://localhost:5000/apply/${params.id}`)
+            },
+            {
+                path: '/apply/:id',
+                element: <PrivateRoute><FinalApply></FinalApply></PrivateRoute>,
+                loader: async ({params}) =>  fetch(`http://localhost:5000/apply/${params.id}`)
+            },
+            {
+                path: '/appliedCard/:id',
+                element: <PrivateRoute><AppliedCard></AppliedCard></PrivateRoute>,
+                loader: async ({params}) =>  fetch(`http://localhost:5000/appliedCard/${params.id}`)
+            },
+            {
+                path: '/applicant/:id',
+                element: <SingleApplicant></SingleApplicant>,
+                loader: async ({params}) =>  fetch(`http://localhost:5000/applicant/${params.id}`)
             },
 
     ]

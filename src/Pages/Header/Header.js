@@ -51,7 +51,7 @@ const Header = () => {
                                 
                                
                                 <>
-                                {   a?.role === 'admin' ? <Link className='blog-container' to='/admin'>Admin-Dashboard</Link>
+                                {   a?.role === 'admin' ? <Link className='blog-container' to='/admin'>Added-Service</Link>
                                     :
                                     a?.role === 'student' && <Link className='blog-container' to='/studentProfile'>Student-Profile</Link>
                                     
@@ -69,7 +69,7 @@ const Header = () => {
                                 <>
                                 {   a?.role === 'admin' ? <Link className='blog-container' to='/addservice'>Add-Services</Link>
                                     :
-                                    a?.role === 'student' && <Link className='blog-container' to='/studentProfile'>Applied</Link>
+                                    a?.role === 'student' && <Link className='blog-container' to='/applied'>Applied</Link>
                                 }
                                 </>
                                     </div>)
@@ -142,7 +142,7 @@ const Header = () => {
                                 
                                
                                 <>
-                                {   a?.role === 'admin' ? <Link className='blog-container' to='/admin'>Admin-Dashboard</Link>
+                                {   a?.role === 'admin' ? <Link className='blog-container' to='/admin'>Added-Service</Link>
                                     :
                                     a?.role === 'student' && <Link className='blog-container' to='/studentProfile'>Student-Profile</Link>
                                 }
@@ -160,7 +160,7 @@ const Header = () => {
                                 <>
                                 {   a?.role === 'admin' ? <Link className='blog-container' to='/addservice'>Add-Services</Link>
                                     :
-                                    a?.role === 'student' && <Link className='blog-container' to='/studentProfile'>Applied</Link>
+                                    a?.role === 'student' && <Link className='blog-container' to='/applied'>Applied</Link>
                                 }
                                 </>
                                     </div>)
@@ -200,10 +200,7 @@ const Header = () => {
                                 <p className='user'>
                                   {users &&
                                     users.map((a) => (
-                                      <p className='name'>
-                                        {a.name}
-                                        
-                                      </p>
+                                      <i><p className='u-name'>{a.name}</p></i>
                                     ))}
                                     {profile &&
                                     profile.map((l) => (
