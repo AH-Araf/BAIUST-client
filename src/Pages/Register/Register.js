@@ -39,8 +39,8 @@ const Register = () => {
             });
     }
 
-    const saveUser = (name, email) =>{
-        const user ={name, email};
+    const saveUser = (name, email, role= 'student') =>{
+        const user ={name, email, role};
         fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {

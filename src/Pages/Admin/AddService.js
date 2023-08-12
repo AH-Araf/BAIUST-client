@@ -39,12 +39,11 @@ const AddService = () => {
             if(imgData.success){
                 console.log(imgData.data.url);
                 const doctor = {
-                    job: data.job, 
+                    Title: data.Title, 
                     description: data.description,
-                    jobDescription: data.jobDescription,
-                    skill: data.skill, 
-                    category: data.category,
-                    deadline: data.deadline,
+                    Details: data.Details,
+                    Fee: data.Fee,
+                    Deadline: data.Deadline,
                     types: data.types,
                     image: imgData.data.url,
                     email: user.email,
@@ -73,74 +72,60 @@ const AddService = () => {
 
 
     return (
-        <div>
-            <div className=''>
+        <div className='flex justify-center items-center'>
+            <div >
             <h2 className="text-4xl home-title">Add New Service</h2>
             <div className=''>
             
             <form onSubmit={handleSubmit(handleAddJob)}>
                 
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Job Title</span></label>
-                    <input type="text" {...register("job", {
-                        required: "Job Title is Required"
+                    <label className="label"> <span className="label-text">Title</span></label>
+                    <input type="text" {...register("Title", {
+                        required: "Title Title is Required"
                     })} className="input input-bordered w-full max-w-xs" />
-                    {errors.job && <p className='text-red-500'>{errors.job.message}</p>}
+                    {errors.Title && <p className='text-red-500'>{errors.Title.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Company Description</span></label>
+                    <label className="label"> <span className="label-text">Description</span></label>
                     <input type="text" {...register("description", {
                         required: true
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.description && <p className='text-red-500'>{errors.description.message}</p>}
                 </div>
-                <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Job Description</span></label>
-                    <input type="text" {...register("jobDescription", {
-                        required: true
-                    })} className="input input-bordered w-full max-w-xs" />
-                    {errors.jobDescription && <p className='text-red-500'>{errors.jobDescription.message}</p>}
-                </div>
-                <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Skills required</span></label>
-                    <input type="text" {...register("skill", {
-                        required: true
-                    })} className="input input-bordered w-full max-w-xs" />
-                    {errors.skill && <p className='text-red-500'>{errors.skill.message}</p>}
-                </div>
-
-                <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Application Deadline</span></label>
-                    <input placeholder="Ex- 10 January 2024" type="text" {...register("deadline", {
-                        required: true
-                    })} className="input input-bordered w-full max-w-xs" />
-                    {errors.deadline && <p className='text-red-500'>{errors.deadline.message}</p>}
-                </div>
                 
-
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Job Category</span></label>
-                    <select 
-                    {...register('category')}
-                    className="select input-bordered w-full max-w-xs">
-                        {<option>Organization</option>}
-                        {<option>IT-Support</option>}
-                        {<option>Government</option>}
-                        {<option>Semi-Government</option>}
-                        {<option>NGO</option>}   
-                        {<option>Private-Firm</option>}
-                        {<option>Agencies</option>}  
-                    </select>
+                    <label className="label"> <span className="label-text">Service Details</span></label>
+                    <input  type="text" {...register("Details", {
+                        required: true
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.Details && <p className='text-red-500'>{errors.Details.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Job Types</span></label>
+                    <label className="label"> <span className="label-text">Service Fee</span></label>
+                    <input  type="text" {...register("Fee", {
+                        required: true
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.Fee && <p className='text-red-500'>{errors.Fee.message}</p>}
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Deadline</span></label>
+                    <input placeholder="Ex- 10 January 2024" type="text" {...register("Deadline", {
+                        required: true
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.Deadline && <p className='text-red-500'>{errors.Deadline.message}</p>}
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Service Types</span></label>
                     <select 
                     {...register('types')}
                     className="select input-bordered w-full max-w-xs">
-                        {<option>Remote</option>}
-                        {<option>On-site</option>}
+                        {<option>Online</option>}
+                        {<option>On-campus</option>}
                     </select>
                 </div>
 
@@ -151,7 +136,7 @@ const AddService = () => {
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.img && <p className='text-red-500'>{errors.img.message}</p>}
                 </div>
-                <input className='btn btn-accent w-full mt-4' value="Add Job" type="submit" />
+                <input className='btn btn-accent w-full mt-4' value="Add" type="submit" />
             </form>
         </div>
         </div>

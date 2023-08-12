@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import SingleStudentProfile from './SingleStudentProfile';
 import './StudentProfile.css'
+import Header from '../Header/Header';
 
 const StudentProfile = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -11,6 +12,7 @@ const StudentProfile = () => {
     const imageHostKey = `771e92fe5bf3b4553445891d6b44f4a1`;
 
     const {user} = useContext(AuthContext);
+    
     const [job, setJob] = useState([])
     useEffect(() => {
         fetch(`http://localhost:5000/studentProfileEmail?stuUserEmail=${user?.email}`)
@@ -208,7 +210,7 @@ const StudentProfile = () => {
                 </>
             
         }  
-        
+     
 </div>
     );
 };
