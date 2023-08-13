@@ -17,6 +17,7 @@ import FinalApply from "../../Pages/Apply/FinalApply";
 import Applied from "../../Pages/Apply/Applied";
 import AppliedCard from "../../Pages/Apply/AppliedCard";
 import SingleApplicant from "../../Pages/Admin/SingleApplicant"
+import AllCardsPrint from "../../Pages/Admin/AllCardsPrint";
 
 export const routes = createBrowserRouter([
     {
@@ -50,6 +51,11 @@ export const routes = createBrowserRouter([
                 path: '/services',
                 element: <Services></Services>,
                 loader: () => fetch('http://localhost:5000/services'),
+            },
+            {
+                path: '/allCards',
+                element: <AllCardsPrint></AllCardsPrint>,
+                loader: () => fetch('http://localhost:5000/apply'),
             },
             {
                 path: '/services/:id',

@@ -13,11 +13,11 @@ const StudentProfile = () => {
 
     const {user} = useContext(AuthContext);
     
-    const [job, setJob] = useState([])
+    const [X, setX] = useState([])
     useEffect(() => {
         fetch(`http://localhost:5000/studentProfileEmail?stuUserEmail=${user?.email}`)
             .then(res => res.json())
-            .then(data => setJob(data))
+            .then(data => setX(data))
     }, [user?.email])
 
 
@@ -32,8 +32,8 @@ const StudentProfile = () => {
                 console.log(data);
                 if (data.deletedCount > 0){
                     alert('Deleted Successfully')
-                    const remaining = job.filter(odr => odr._id !== id);
-                    setJob(remaining);
+                    const remaining = X.filter(odr => odr._id !== id);
+                    setX(remaining);
                 }
             })
         }
@@ -87,15 +87,15 @@ const StudentProfile = () => {
     return (
         <div className='flex justify-center items-center'>
 {
-  job.length===0?
+  X.length===0?
   <>
-      <div className='email-job'>
+      <div className=''>
             
 
             
             <div className='formApply'>
             <h2 className="text-3xl home-title">Create Your Student Profile</h2>
-            <div className='add-jobs-container'>
+            <div className=''>
           
             
             <form onSubmit={handleSubmit(handleApply)}>
@@ -201,7 +201,7 @@ const StudentProfile = () => {
   :
     <>
     {
-                job.map(x => <SingleStudentProfile
+                X.map(x => <SingleStudentProfile
                     key={x._id}
                     x={x}
                     handleDelete={handleDelete}

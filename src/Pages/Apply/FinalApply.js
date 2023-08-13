@@ -15,7 +15,7 @@ const FinalApply = ({x}) => {
     const imageHostKey = `771e92fe5bf3b4553445891d6b44f4a1`;
 
     const handleApply = data => {
-                const doctor = {
+                const addDetails = {
                             name: sName, 
                             applicantEmail: email,
                             pNumber: PNumber,
@@ -33,13 +33,13 @@ const FinalApply = ({x}) => {
                             stuUserEmail: stuUserEmail
                 }
 
-                // save doctor information to the database
+                
                 fetch('http://localhost:5000/apply', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
                     },
-                    body: JSON.stringify(doctor)
+                    body: JSON.stringify(addDetails)
                 })
                 .then(res => res.json())
                 .then(result =>{
@@ -54,7 +54,7 @@ const FinalApply = ({x}) => {
         <div>
             <div className='formApply'>
             <h2 className="apply-header-txt">Apply Now</h2>
-            <div className='add-jobs-container'>
+            <div className=''>
            
             
             <form onSubmit={handleSubmit(handleApply)}>

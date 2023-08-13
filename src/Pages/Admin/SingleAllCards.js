@@ -1,30 +1,11 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
 import sig from "../assets/Images/sig.png"
 
-const SingleApplicant = () => {
-    const x = useLoaderData();
+const SingleAllCards = ({x}) => {
     return (
-
-        <div className='applicantOnAdminOne'>
-            <div className='applicantOnAdminTwo'>
-                <img src={x.imageApplicant} alt="" />
-                <p>{x.name}</p>
-                <p>ID- {x.ID}</p>
-                <p>Level-{x.Level}, Term-{x.Term}</p> 
-                <p>Phone: {x.pNumber}</p>
-                <p>Email: {x.stuUserEmail}</p>
-                <p>Nationality: Bangladeshi</p>
-                <p>Gender: {x.Gender}</p>
-                <p>Blood group: {x.BloodGroup}</p>
-
-            </div>
-
-            
-
+        <div className='all-card'>
             <div>
-                <h1 className='a-card'>Authorized Card</h1>
-            <div className='card-details'>
+<div className='card-details'>
                 <i><p className='card-title2'>Bangladesh Army International University of Science and Technology (BAIUST)</p></i>
                 <p className='card-title2'>{x.appliedOn} Card</p>
                 <div className='card-student-details'>
@@ -45,9 +26,9 @@ const SingleApplicant = () => {
                     </div>
                 </div>
             </div>
-            </div>
+</div>
         </div>
     );
 };
 
-export default SingleApplicant;
+export default SingleAllCards;

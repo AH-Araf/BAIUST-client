@@ -24,8 +24,8 @@ const Apply = () => {
     }, [user?.email])
     
     return (
-        <div className='apply-con email-job'>
-            {/* Job Info */}
+        <div className='apply-con'>
+            
             <div className='service-container1'>
                 <div className='serviceImg'><img src={a.image} alt="" />  </div>   
                         <u><h4 className="title">{a.Title}</h4></u> 
@@ -46,7 +46,7 @@ const Apply = () => {
         {
               apply.length===0?
               <>
-                  <h2 className='no-job'>First create Job-Profile, then apply.</h2>
+                  <h2 className='no-service'>First create Student Profile, then apply.</h2>
               </>
               :
                 <>

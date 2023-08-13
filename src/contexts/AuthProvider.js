@@ -22,11 +22,6 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth, provider);
     }
 
-//     const auth = getAuth();
-// sendEmailVerification(auth.currentUser)
-//   .then(() => {
-    
-//   });
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -60,6 +55,7 @@ const AuthProvider = ({children}) => {
         }
 
     }, [])
+
 
 
     const authInfo = { user, loading, providerLogin, logOut, createUser, signIn, providerGitLogin, updateUserProfile }

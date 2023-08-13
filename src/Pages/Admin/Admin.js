@@ -34,7 +34,7 @@ const Admin = () => {
             {
               A.length===0?
               <>
-                  <h2 className='no-job'>You have not posted any service yet</h2>
+                  <h2 className='no-service'>You have not posted any service yet</h2>
               </>
               :
                 <>
@@ -48,6 +48,7 @@ const Admin = () => {
                             </>
                         
                     }  
+                    <div className=''><Link to='/allCards' className='b-btn btn btn-outline mt-5 d-button'>Get All Students Cards For Print</Link></div>
         </div>
     );
 };

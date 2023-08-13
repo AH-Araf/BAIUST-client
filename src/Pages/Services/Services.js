@@ -4,7 +4,7 @@ import './Services.css'
 import SService from './SService';
 
 const Services = () => {
-    const jobs = useLoaderData();
+    const A = useLoaderData();
     const [searchTerm, setSerachTerm] = useState('')
 
     return (
@@ -22,11 +22,11 @@ const Services = () => {
             </div>
 
 
-            <div className='display-flex m-3 all-jobs'>
+            <div className='display-flex m-3'>
             
                 {
 
-                    jobs.filter((val)=>{
+                    A.filter((val)=>{
                         if(searchTerm == ""){
                             return val
                         } else if (val.Title.toLowerCase().includes(searchTerm.toLowerCase())){

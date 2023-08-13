@@ -23,7 +23,7 @@ const AddService = () => {
     // console.log(user.email);
 
     //
-    const handleAddJob = data => {
+    const handleAddstudent = data => {
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -37,7 +37,7 @@ const AddService = () => {
         .then(imgData => {
             if(imgData.success){
                 console.log(imgData.data.url);
-                const doctor = {
+                const addDB = {
                     Title: data.Title, 
                     description: data.description,
                     Details: data.Details,
@@ -56,7 +56,7 @@ const AddService = () => {
                         'content-type': 'application/json', 
                         
                     },
-                    body: JSON.stringify(doctor)
+                    body: JSON.stringify(addDB)
                 })
                 .then(res => res.json())
                 .then(result =>{
@@ -77,12 +77,12 @@ const AddService = () => {
             <h2 className="text-4xl home-title">Add New Service</h2>
             <div className=''>
             
-            <form onSubmit={handleSubmit(handleAddJob)}>
+            <form onSubmit={handleSubmit(handleAddstudent)}>
                 
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Title</span></label>
                     <input type="text" {...register("Title", {
-                        required: "Title Title is Required"
+                        required: "Title is Required"
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.Title && <p className='text-red-500'>{errors.Title.message}</p>}
                 </div>
@@ -139,7 +139,7 @@ const AddService = () => {
                 </div>
 
                 <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Company's Logo or Image</span></label>
+                    <label className="label"> <span className="label-text">Service Image</span></label>
                     <input type="file" {...register("image", {
                         required: "Image is Required"
                     })} className="input input-bordered w-full max-w-xs" />
