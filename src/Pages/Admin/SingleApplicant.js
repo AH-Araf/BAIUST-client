@@ -5,7 +5,6 @@ import sig from "../assets/Images/sig.png"
 const SingleApplicant = () => {
     const x = useLoaderData();
     return (
-
         <div className='applicantOnAdminOne'>
             <div className='applicantOnAdminTwo'>
                 <img src={x.imageApplicant} alt="" />

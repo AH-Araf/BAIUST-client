@@ -16,7 +16,7 @@ const Applied = () => {
         {
           A.length===0?
           <>
-              <h2 className='no-applied'>You have not applied any services yet</h2>
+              <h2 className='no-service'>You have not applied any services yet.</h2>
           </>
           :
             <>

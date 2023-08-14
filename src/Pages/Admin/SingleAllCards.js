@@ -5,6 +5,7 @@ const SingleAllCards = ({x}) => {
     return (
         <div className='all-card'>
             <div>
+
 <div className='card-details'>
                 <i><p className='card-title2'>Bangladesh Army International University of Science and Technology (BAIUST)</p></i>
                 <p className='card-title2'>{x.appliedOn} Card</p>
@@ -22,7 +23,7 @@ const SingleAllCards = ({x}) => {
                         <small>Gender: {x.Gender}</small> <br />
                         <small>Blood group: {x.BloodGroup}</small>
                         <div className='signature'><img src={sig} alt="" /></div>
-                        <small className='text-small'>Signature of the {x.appliedOn} Administration</small>
+                        <small className='text-small'>Signature of the {x.appliedOn} <br /> Administration</small>
                     </div>
                 </div>
             </div>

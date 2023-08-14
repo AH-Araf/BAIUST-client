@@ -47,6 +47,7 @@ const AddService = () => {
                     types: data.types,
                     image: imgData.data.url,
                     adminEmail: user.email,
+                    sVacancy: data.sVacancy,
                 }
 
               
@@ -126,6 +127,14 @@ const AddService = () => {
                         required: true
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.Deadline && <p className='text-red-500'>{errors.Deadline.message}</p>}
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Vacancy</span></label>
+                    <input placeholder="" type="number" {...register("sVacancy", {
+                        required: true
+                    })} className="input input-bordered w-full max-w-xs" />
+                    {errors.sVacancy && <p className='text-red-500'>{errors.sVacancy.message}</p>}
                 </div>
 
                 <div className="form-control w-full max-w-xs">

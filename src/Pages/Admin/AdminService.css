@@ -98,4 +98,16 @@
     .all-card{
         margin: 10px 10px;
     }
+    .text-small{
+        font-size: xx-small;
+        font-weight: 500;
+        color: blue;
+    }
+    .applicantOnAdminOne{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0px;
+        background-color: aliceblue;
+    }
 }
