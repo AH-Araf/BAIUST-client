@@ -16,7 +16,7 @@ const AddService = () => {
     
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/email?email=${user?.email}`)
+        fetch(`https://baiust-server-side.onrender.com/email?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [user?.email])
@@ -51,7 +51,7 @@ const AddService = () => {
                 }
 
               
-                fetch('http://localhost:5000/services', {
+                fetch('https://baiust-server-side.onrender.com/services', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 

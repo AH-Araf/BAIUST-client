@@ -7,7 +7,7 @@ const Applied = () => {
     // console.log(a);
     const [A, setA] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/applyEmail?stuUserEmail=${user?.email}`)
+        fetch(`https://baiust-server-side.onrender.com/applyEmail?stuUserEmail=${user?.email}`)
             .then(res => res.json())
             .then(data => setA(data))
     }, [user?.email])

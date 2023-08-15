@@ -8,6 +8,7 @@ const AdminSCategory = ({x}) => {
             <p>{x.name}</p>
             <small>ID- {x.ID}</small><br />
             <small>Level-{x.Level}, Term-{x.Term}</small> <br />
+            <small>Department- {x.Department}</small><br />
             <Link to={`/applicant/${x._id}`}><button className='btn-applicant'>View Applicant Full Details</button></Link>
         </div>
     );

@@ -91,7 +91,13 @@
     width: 60px;
     height: 80px;
 }
-
+.bsp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-size: larger;
+}
 @media only screen and (max-width: 516px){
     .card-details{
         width: 360px;

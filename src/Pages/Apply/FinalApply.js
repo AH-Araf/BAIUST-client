@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const FinalApply = ({x}) => {
-    const {sName, email, PNumber, ID, Level, Term, Gender,BloodGroup, uImage, stuUserEmail} =x;
+    const {Department, Nationality,Religion, sName, email, PNumber, ID, Level, Term, Gender,BloodGroup, uImage, stuUserEmail} =x;
     
 
     const a = useLoaderData();
@@ -17,6 +17,9 @@ const FinalApply = ({x}) => {
     const handleApply = data => {
                 const addDetails = {
                             name: sName, 
+                            Department: Department,
+                            Nationality: Nationality,
+                            Religion: Religion,
                             applicantEmail: email,
                             pNumber: PNumber,
                             ID: ID,
@@ -34,7 +37,7 @@ const FinalApply = ({x}) => {
                 }
 
                 
-                fetch('http://localhost:5000/apply', {
+                fetch('https://baiust-server-side.onrender.com/apply', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 

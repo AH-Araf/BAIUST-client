@@ -1,0 +1,103 @@
+.car-img img{
+    height: 580px;
+}
+.marquee-text{
+    color: black;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lavender;
+}
+.mar-img{
+    height: 30px;
+    width: 30px;
+    margin: 2px 12px;
+}
+.home-service-container{
+    display: flex;
+    justify-content: space-around;
+}
+.home-service-container img{
+    height: 200px;
+    width: 400px;
+    border: 4px solid rgb(240, 166, 191);
+    padding: 5px;
+}
+.home-service{
+    margin-top: 80px;
+}
+.h-s-t{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: x-large;
+    font-weight: 600;
+    border-top: 4px solid rgb(112, 161, 112);
+    background-color: lavender;
+    font-family: 'Times New Roman', Times, serif;
+}
+.hsd{
+    font-size: x-large;
+    font-weight: 600;
+}
+.taka{
+    color: red;
+    font-weight: 500;
+}
+.service-card{
+    background-color: lavender;
+    padding: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition-duration: 1s;
+}
+.service-card:hover{
+    background-color: rgb(207, 224, 207);
+    padding: 40px;
+    border-bottom-right-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.members-container img{
+    width: 150px;
+    height: 180px;
+    border: 3px solid green;
+    padding: 2px;
+    border-radius: 5px;
+}
+.members-container1{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.member-card{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: lavenderblush;
+    padding: 20px 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition-duration: 1s;
+}
+.member-card:hover{
+    background-color: rgb(236, 241, 236);
+    border-bottom-right-radius: 30px;
+}
+.m-name{
+    font-weight: 600;
+}
+@media only screen and (max-width: 516px){
+    .car-img img{
+        height: 200px;
+    }
+    .home-service-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .members-container1{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

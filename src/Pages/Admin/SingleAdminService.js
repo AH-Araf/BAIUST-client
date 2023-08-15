@@ -8,7 +8,7 @@ const SingleAdminService = ({x,handleDelete}) => {
 
     const [apply, setApply] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/serviceId?sId=${_id}`)
+        fetch(`https://baiust-server-side.onrender.com/serviceId?sId=${_id}`)
             .then(res => res.json())
             .then(data => setApply(data))
     }, [_id])

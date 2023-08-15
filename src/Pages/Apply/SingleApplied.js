@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SingleApplied = ({x}) => {
-    const {name,applicantEmail,pNumber,ID,Level,Term,Gender,BloodGroup,serviceImage,imageApplicant,appliedOn,sTypes,stuUserEmail, _id} = x;
+    const {Department, name,applicantEmail,pNumber,ID,Level,Term,Gender,BloodGroup,serviceImage,imageApplicant,appliedOn,sTypes,stuUserEmail, _id} = x;
     return (
         <div className='applied-container'>
             <div className='applied-single'>
@@ -16,6 +16,7 @@ const SingleApplied = ({x}) => {
             <img src={imageApplicant} alt="" />
                 <p>{name}</p>
                 <p>{ID}</p>
+                <p>{Department}</p>
                 <p>Level-{Level}, Term-{Term}</p>
                 <p>{pNumber}</p> 
                 <p>{Gender}</p>

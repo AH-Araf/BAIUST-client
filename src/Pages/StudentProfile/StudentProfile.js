@@ -15,7 +15,7 @@ const StudentProfile = () => {
     
     const [X, setX] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/studentProfileEmail?stuUserEmail=${user?.email}`)
+        fetch(`https://baiust-server-side.onrender.com/studentProfileEmail?stuUserEmail=${user?.email}`)
             .then(res => res.json())
             .then(data => setX(data))
     }, [user?.email])
@@ -24,7 +24,7 @@ const StudentProfile = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            fetch(`http://localhost:5000/studentProfileDelete/${id}`, {
+            fetch(`https://baiust-server-side.onrender.com/studentProfileDelete/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -60,6 +60,7 @@ const StudentProfile = () => {
                     PNumber: data.pNumber,
                     ID: data.ID,
                     Level: data.Level,
+                    Department: data.Department,
                     Term: data.Term,
                     Nationality: data.Nationality,
                     Gender: data.Gender,
@@ -68,7 +69,7 @@ const StudentProfile = () => {
                     uImage: imgData.data.url,
                     stuUserEmail: user.email,
                 }
-                 fetch('http://localhost:5000/studentProfile', {
+                 fetch('https://baiust-server-side.onrender.com/studentProfile', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 
@@ -132,6 +133,22 @@ const StudentProfile = () => {
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.Term && <p className='text-red-500'>{errors.Term.message}</p>}
                 </div>
+                </div>
+
+                <div className="form-control w-full max-w-xs">
+                    <label className="label"> <span className="label-text">Department</span></label>
+                    <select 
+                    {...register('Department')}
+                    className="select input-bordered w-full max-w-xs">
+                        {<option>CSE</option>}
+                        {<option>EEE</option>}
+                        {<option>CE</option>}
+                        {<option>BBA</option>}
+                        {<option>LLB</option>}
+                        {<option>ENG</option>}
+                        {<option>ICT</option>}
+                        {<option>ECO</option>}
+                    </select>
                 </div>
 
                 <div className="form-control w-full max-w-xs">

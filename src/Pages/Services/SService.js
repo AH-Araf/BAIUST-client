@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SService = ({a}) => {
     const [apply, setApply] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/serviceId?sId=${a._id}`)
+        fetch(`https://baiust-server-side.onrender.com/serviceId?sId=${a._id}`)
             .then(res => res.json())
             .then(data => setApply(data))
     }, [a._id])

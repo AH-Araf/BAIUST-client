@@ -4,10 +4,10 @@ import { AuthContext } from '../../contexts/AuthProvider';
 import SingleAdminService from './SingleAdminService';
 
 const Admin = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const {user} = useContext(AuthContext);
     const [A, setA] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/serviceAdminEmail?adminEmail=${user?.email}`)
+        fetch(`https://baiust-server-side.onrender.com/serviceAdminEmail?adminEmail=${user?.email}`)
             .then(res => res.json())
             .then(data => setA(data))
     }, [user?.email])
@@ -15,7 +15,7 @@ const Admin = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            fetch(`http://localhost:5000/serviceDelete/${id}`, {
+            fetch(`https://baiust-server-side.onrender.com/serviceDelete/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

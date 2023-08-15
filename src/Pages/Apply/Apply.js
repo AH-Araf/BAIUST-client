@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import FinalApply from './FinalApply';
 import './Apply.css'
@@ -18,7 +18,7 @@ const Apply = () => {
 
     const [apply, setApply] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/studentProfileEmail?stuUserEmail=${user?.email}`)
+        fetch(`https://baiust-server-side.onrender.com/studentProfileEmail?stuUserEmail=${user?.email}`)
             .then(res => res.json())
             .then(data => setApply(data))
     }, [user?.email])
@@ -47,6 +47,7 @@ const Apply = () => {
               apply.length===0?
               <>
                   <h2 className='no-service'>First create Student Profile, then apply.</h2>
+                  <Link className='bsp' to='/studentProfile'>Click- Back to student profile</Link>
               </>
               :
                 <>

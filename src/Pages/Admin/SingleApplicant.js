@@ -10,10 +10,12 @@ const SingleApplicant = () => {
                 <img src={x.imageApplicant} alt="" />
                 <p>{x.name}</p>
                 <p>ID- {x.ID}</p>
+                <p>Department- {x.Department}</p>
                 <p>Level-{x.Level}, Term-{x.Term}</p> 
                 <p>Phone: {x.pNumber}</p>
                 <p>Email: {x.stuUserEmail}</p>
-                <p>Nationality: Bangladeshi</p>
+                <p>Nationality: {x.Nationality}</p>
+                <p>Religion: {x.Religion}</p>
                 <p>Gender: {x.Gender}</p>
                 <p>Blood group: {x.BloodGroup}</p>
 
@@ -31,11 +33,12 @@ const SingleApplicant = () => {
                         <img src={x.imageApplicant} alt="" />
                         <small>Name: {x.name}</small> <br />
                         <small>ID: {x.ID}</small> <br />
-                        <small>Level-{x.Level}, Term-{x.Term}</small><br />
+                        
+                        <small>Department- {x.Department}</small>
                     </div>
                     <div>
                         
-                        
+                    <small>Level-{x.Level}, Term-{x.Term}</small><br />
                         <small>Phone: {x.pNumber}</small><br />
                         <small>Gender: {x.Gender}</small> <br />
                         <small>Blood group: {x.BloodGroup}</small>

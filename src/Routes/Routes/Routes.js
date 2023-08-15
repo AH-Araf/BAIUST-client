@@ -19,6 +19,8 @@ import AppliedCard from "../../Pages/Apply/AppliedCard";
 import SingleApplicant from "../../Pages/Admin/SingleApplicant"
 import AllCardsPrint from "../../Pages/Admin/AllCardsPrint";
 
+
+
 export const routes = createBrowserRouter([
     {
     path:'/',
@@ -50,17 +52,17 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>,
-                loader: () => fetch('http://localhost:5000/services'),
+                loader: () => fetch('https://baiust-server-side.onrender.com/services'),
             },
             {
                 path: '/allCards',
                 element: <AllCardsPrint></AllCardsPrint>,
-                loader: () => fetch('http://localhost:5000/apply'),
+                loader: () => fetch('https://baiust-server-side.onrender.com/apply'),
             },
             {
                 path: '/services/:id',
                 element: <SingleService></SingleService>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/services/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://baiust-server-side.onrender.com/services/${params.id}`)
             },
             {
                 path: '/addservice',
@@ -74,25 +76,26 @@ export const routes = createBrowserRouter([
                 path: '/applied',
                 element: <Applied></Applied>,
             },
+            
             {
                 path: '/apply/:id',
                 element: <PrivateRoute><Apply></Apply></PrivateRoute>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/apply/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://baiust-server-side.onrender.com/apply/${params.id}`)
             },
             {
                 path: '/apply/:id',
                 element: <PrivateRoute><FinalApply></FinalApply></PrivateRoute>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/apply/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://baiust-server-side.onrender.com/apply/${params.id}`)
             },
             {
                 path: '/appliedCard/:id',
                 element: <PrivateRoute><AppliedCard></AppliedCard></PrivateRoute>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/appliedCard/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://baiust-server-side.onrender.com/appliedCard/${params.id}`)
             },
             {
                 path: '/applicant/:id',
                 element: <SingleApplicant></SingleApplicant>,
-                loader: async ({params}) =>  fetch(`http://localhost:5000/applicant/${params.id}`)
+                loader: async ({params}) =>  fetch(`https://baiust-server-side.onrender.com/applicant/${params.id}`)
             },
 
     ]

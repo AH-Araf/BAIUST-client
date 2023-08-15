@@ -12,10 +12,11 @@ const AppliedCard = () => {
                 <div className='card-student-details'>
                     <div>
                         <img src={x.imageApplicant} alt="" />
-                        <small>Name: {x.name}</small>
+                        <small>Name: {x.name}</small> <br />
+                        <small>ID: {x.ID}</small> <br />
                     </div>
                     <div>
-                        <small>ID: {x.ID}</small> <br />
+                        <small>Department: {x.Department}</small> <br />
                         <small>Level-{x.Level}, Term-{x.Term}</small><br />
                         <small>Phone: {x.pNumber}</small><br />
                         <small>Gender: {x.Gender}</small> <br />
