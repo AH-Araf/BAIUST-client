@@ -140,7 +140,7 @@ const Header = () => {
 
 
                   <>
-                    {a?.role === 'admin' ? <Link className='blog-container' to='/admin'>Added-Service</Link>
+                  {a?.role === 'admin' ? <Link className='blog-container' to='/admin'>Added-Service</Link>
                       :
                       a?.role === 'student' && <Link className='blog-container' to='/studentProfile'>Student-Profile</Link>
                     }
@@ -165,6 +165,8 @@ const Header = () => {
               }
 
             </li>
+
+            
 
             <li><Link to='/services'>Services</Link></li>
 

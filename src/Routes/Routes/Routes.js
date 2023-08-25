@@ -1,24 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
-import Home from "../../Pages/Home/Home"
-import StudentProfile from "../../Pages/StudentProfile/StudentProfile"
-import Hostel from "../../Pages/Hostel/Hostel"
-import Transport from "../../Pages/Transport/Transport"
+import Home from "../../Pages/Home/Home";
+import StudentProfile from "../../Pages/StudentProfile/StudentProfile";
+import Hostel from "../../Pages/Hostel/Hostel";
+import Transport from "../../Pages/Transport/Transport";
 import NotFound from "../../Pages/NotFound/NotFound";
-import Login from "../../Pages/Login/Login"
-import Register from "../../Pages/Register/Register"
-import Services from "../../Pages/Services/Services"
-import Apply from "../../Pages/Apply/Apply"
-import SingleService from "../../Pages/Services/SingleService"
-import AddService from "../../Pages/Admin/AddService"
-import PrivateRoute from "../PrivateRoute/PrivateRoute"
+import Login from "../../Pages/Login/Login";
+import Register from "../../Pages/Register/Register";
+import Services from "../../Pages/Services/Services";
+import Apply from "../../Pages/Apply/Apply";
+import SingleService from "../../Pages/Services/SingleService";
+import AddService from "../../Pages/Admin/AddService";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Admin from "../../Pages/Admin/Admin";
 import FinalApply from "../../Pages/Apply/FinalApply";
 import Applied from "../../Pages/Apply/Applied";
 import AppliedCard from "../../Pages/Apply/AppliedCard";
-import SingleApplicant from "../../Pages/Admin/SingleApplicant"
+import SingleApplicant from "../../Pages/Admin/SingleApplicant";
 import AllCardsPrint from "../../Pages/Admin/AllCardsPrint";
-
+  
 
 
 export const routes = createBrowserRouter([
